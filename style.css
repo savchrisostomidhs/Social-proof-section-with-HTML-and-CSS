@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=League+Spartan:wght@100..900&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body,
+main {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background: url(./images/bg-pattern-bottom-mobile.svg) no-repeat bottom, url(./images/bg-pattern-top-mobile.svg) no-repeat top;
+    font-family: "League Spartan", sans-serif;
+    font-size: 15px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 80px 25px 100px;
+}
+
+main .top {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+main .bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Text */
+
+main .top .text {
+    text-align: center;
+}
+
+main .top .text h1 {
+    color: hsl(300, 43%, 22%);
+    font-size: 42px;
+    letter-spacing: -2px;
+    line-height: 32px;
+    margin-bottom: 25px;
+}
+
+main .top .text p {
+    color: hsl(303, 10%, 53%);
+    font-size: 16px;
+    line-height: 20px;
+}
+
+/* Rates */
+
+main .top .rates {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+}
+
+main .top .rates .ratings {
+    align-items: center;
+    background-color: hsl(300, 24%, 96%);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 75px;
+    justify-content: center;
+    width: 100%;
+}
+
+main .top .rates .ratings p {
+    color: hsl(300, 43%, 22%);
+    font-weight: 700;
+}
+
+/* Cards */
+
+main .bottom .card {
+    background-color: hsl(300, 43%, 22%);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    height: 248px;
+    padding: 30px;
+    width: 100%;
+}
+
+main .bottom .card .info {
+    align-items: center;
+    display: flex;
+    gap: 20px;
+}
+
+main .bottom .card .info img {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+main .bottom .card .info .name {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+main .bottom .card .info .name p:first-child {
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+}
+
+main .bottom .card .info .name p:nth-child(2) {
+    color: hsl(333, 80%, 67%, 0.8);
+}
+
+main .bottom .card>p {
+    color: hsl(0, 0%, 100%);
+    font-size: 17px;
+    line-height: 24px;
+}
+
+.attribution {
+    display: none;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 500px) {
+    body {
+        background: url(./images/bg-pattern-bottom-desktop.svg) no-repeat bottom right, url(./images/bg-pattern-top-desktop.svg) no-repeat top left;
+    }
+
+    main {
+        gap: 80px;
+        padding: 100px 165px;
+    }
+
+    main .top {
+        flex-direction: row;
+        gap: 0;
+        width: 100%;
+    }
+
+    main .bottom {
+        align-items: center;
+        flex-direction: row;
+        gap: 28px;
+        height: 100%;
+        width: 100%;
+    }
+
+    main .top .text {
+        height: 100%;
+        text-align: left;
+        width: 50%;
+    }
+
+    main .top .text h1 {
+        font-size: 56px;
+        letter-spacing: 0px;
+        line-height: 48px;
+        margin-bottom: 30px;
+        width: 65%;
+    }
+
+    main .top .text p {
+        font-size: 18px;
+        width: 75%;
+    }
+
+    main .top .rates {
+        align-items: center;
+        width: 50%;
+    }
+
+    main .top .rates .ratings {
+        flex-direction: row;
+        gap: 30px;
+        height: 55px;
+        justify-content: flex-start;
+        padding: 30px;
+        width: 400px;
+    }
+
+    main .top .rates .reviews {
+        align-self: flex-start;
+        margin-left: 35px;
+    }
+
+    main .top .rates .bestTech {
+        align-self: flex-end;
+        margin-right: 35px;
+    }
+
+    main .bottom .card {
+        height: 235px;
+    }
+
+    main .bottom .colton {
+        align-self: flex-start;
+        margin-top: 35px;
+    }
+
+    main .bottom .anne {
+        align-self: flex-end;
+        margin-bottom: 35px;
+    }
+}
+
+@media (max-height: 800px) and (min-width: 500px) {
+    main {
+        gap: 10px;
+        padding: 40px;
+    }
+
+    main .top {
+        padding: 20px;
+    }
+
+    main .bottom {
+        height: 100%;
+        padding: 20px;
+    }
+
+    main .bottom .colton {
+        margin-bottom: 75px;
+    }
+
+    main .bottom .anne {
+        margin-top: 75px;
+    }
+}
